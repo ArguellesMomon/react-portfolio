@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+/* Import pixel font once */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    background-color: #f8f9fa;
+    font-family: 'Press Start 2P', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar a,
+.navbar-brand {
+    color: white !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pixel-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pixel-border {
+    border: 4px solid #000;
+    background-color: #fff9db;
+    box-shadow: 4px 4px 0px #000;
 }
 
-.App-link {
-  color: #61dafb;
+.pixel-btn {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffcb05;
+    border: 3px solid #3b4cca;
+    color: #3b4cca;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pixel-btn:hover {
+    background-color: #3b4cca;
+    color: #ffcb05;
+}
+
+.pixel-image {
+    image-rendering: pixelated;
+}
+
+.pixel-nav {
+    background-color: #3b4cca;
+    border-bottom: 4px solid #ffcb05;
+}
+
+.pixel-input {
+    border: 3px solid #3b4cca;
+}
+
+
+/* Retro background pattern */
+
+.retro-bg {
+    background-image: url('https://www.transparenttextures.com/patterns/pixel-weave.png');
+}
+
+
+/* Pokedex button style */
+
+.pixel-btn.pokedex-btn {
+    font-family: 'Press Start 2P', monospace;
+    background-color: #001aff;
+    /* classic pokeball blue */
+    border: 3px solid #000;
+    color: white;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    box-shadow: 3px 3px 0 #07008b;
+    padding: 10px 12px;
+    letter-spacing: 1px;
+}
+
+.pixel-btn.pokedex-btn:hover {
+    background-color: #4479ff;
+    box-shadow: 4px 4px 0 #002a5a;
+}
+
+
+/* Contact section styles */
+
+#contact {
+    position: relative;
+    font-family: 'Press Start 2P', monospace;
+    background: #3B4CCA;
+    /* Pokémon blue */
+    color: #FFF;
+    border: 4px solid #FFD700;
+    /* bright yellow border */
+    box-shadow: 5px 5px 0 #000;
+    /* pixel shadow */
+    padding: 30px 15px;
+    overflow: hidden;
+    /* contain overlay */
+}
+
+#contact .contact-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* dark overlay */
+    z-index: 0;
+}
+
+#contact .container {
+    position: relative;
+    z-index: 1;
+    /* content above overlay */
+}
+
+#contact label.pixel-text,
+#contact .pixel-text {
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    /* pixel outline */
+}
+
+#contact .form-control.pixel-input {
+    font-family: 'Press Start 2P', monospace;
+    border: 2px solid #FFD700;
+    background-color: #223377;
+    color: #FFF;
+    box-shadow: none;
+    border-radius: 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contact .form-control.pixel-input:focus {
+    background-color: #334499;
+    border-color: #FFD700;
+    box-shadow: 0 0 5px #FFD700;
+    color: #FFF;
+}
+
+#contact button.pixel-btn {
+    font-family: 'Press Start 2P', monospace;
+    background-color: #FFCB05;
+    /* Pokemon yellow */
+    border: 3px solid #000;
+    color: #000;
+    padding: 10px 15px;
+    letter-spacing: 1px;
+    box-shadow: 3px 3px 0 #B8860B;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+#contact button.pixel-btn:hover {
+    background-color: #FFD93D;
+    box-shadow: 4px 4px 0 #8B7500;
+}
+
+.card-title.pixel-text {
+    font-size: 1.1rem;
 }
